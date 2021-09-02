@@ -11,6 +11,7 @@ import {
   deployButton,
 } from "./index.module.css"
 
+<<<<<<< HEAD
 
 export const query = graphql`
   {
@@ -39,12 +40,22 @@ export const query = graphql`
             }
           }
         }
+=======
+export const query = graphql`
+  query {
+    shopifyCollection(handle: { eq: "frontpage" }) {
+      products {
+        ...ProductCard
+>>>>>>> parent of fa01bff (Update index.jsx)
       }
     }
   }
 `
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> parent of fa01bff (Update index.jsx)
 function Hero (props) {
   return (
     <div className={container}>
