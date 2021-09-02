@@ -13,9 +13,27 @@ import {
 
 export const query = graphql`
   query {
-    shopifyCollection(handle: { eq: "frontpage" }) {
-      products {
-        ...ProductCard
+    allShopifyProduct {
+      nodes {
+        title
+        description
+        id
+        variants {
+          shopifyId
+          priceV2 {
+            amount
+            currencyCode
+          }
+        }
+        images {
+          localFile {
+            childImageSharp {
+              fixed(width: 300) {
+                ...GatsbyImageSharpFixed_withWebp_tracedSVG
+              }
+            }
+          }
+        }
       }
     }
   }
