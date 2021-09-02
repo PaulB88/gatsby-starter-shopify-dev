@@ -20,6 +20,35 @@ export const query = graphql`
     }
   }
 `
+export const query = graphql`
+  {
+    allShopifyProduct {
+      nodes {
+        title
+        description
+        id
+        variants {
+          shopifyId
+          priceV2 {
+            amount
+            currencyCode
+          }
+        }
+        images {
+          localFile {
+            childImageSharp {
+              fixed(width: 300) {
+                ...GatsbyImageSharpFixed_withWebp_tracedSVG
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`
+
+
 function Hero (props) {
   return (
     <div className={container}>
