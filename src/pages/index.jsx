@@ -11,14 +11,18 @@ import {
   deployButton,
 } from "./index.module.css"
 
-
+export const query = graphql`
+  query {
+    shopifyCollection(handle: { eq: "frontpage" }) {
+      products {
+        ...ProductCard
+      }
+    }
+  }
+`
 export const query = graphql`
   {
     allShopifyProduct {
-      shopifyCollection(handle: { eq: "frontpage" }) {
-        products {
-          ...ProductCard 
-        }
       nodes {
         title
         description
