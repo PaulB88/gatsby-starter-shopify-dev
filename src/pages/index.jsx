@@ -1,4 +1,5 @@
 import * as React from "react"
+import "./index.css"
 import { graphql } from "gatsby"
 import { Layout } from "../components/layout"
 import { ProductListing } from "../components/product-listing"
