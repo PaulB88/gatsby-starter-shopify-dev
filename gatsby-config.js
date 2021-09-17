@@ -47,8 +47,8 @@ module.exports = {
     {
       resolve: "gatsby-source-shopify",
       options: {
-        password: process.env.SHOPIFY_ADMIN_PASSWORD,
-        storeUrl: process.env.SHOPIFY_STORE_URL,
+        password: process.env.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,
+        storeUrl: process.env.peerless-av-dev5.myshopify.com,
       },
     },
     "gatsby-plugin-image",
