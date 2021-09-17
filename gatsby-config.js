@@ -39,3 +39,18 @@ module.exports = {
     },
   ].filter(Boolean),
 }
+
+require("dotenv").config()
+
+module.exports = {
+  plugins: [
+    {
+      resolve: "gatsby-integration",
+      options: {
+        password: process.env.SHOPIFY_ADMIN_PASSWORD,
+        storeUrl: process.env.SHOPIFY_STORE_URL,
+      },
+    },
+    "gatsby-plugin-image",
+  ],
+}
